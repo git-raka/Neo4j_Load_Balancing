@@ -21,8 +21,11 @@ Open JMeter (optional)
 CALL dbms.cluster.overview
 
 CALL dbms.cluster.routing.getRoutingTable({}) 
+
 YIELD ttl, servers 
+
 UNWIND servers as server
+
 RETURN ttl, server.role, server.addresses;
 
 

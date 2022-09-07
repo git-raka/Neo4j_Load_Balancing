@@ -17,16 +17,13 @@ Open VSCode for Sending READand WRITE
 Open JMeter (optional)
 
 ## EXECUTION COMMAND
-
+```
 CALL dbms.cluster.overview
-
 CALL dbms.cluster.routing.getRoutingTable({}) 
-
 YIELD ttl, servers 
-
 UNWIND servers as server
-
 RETURN ttl, server.role, server.addresses;
+```
 
 
 ## SCENARIO
